@@ -28,3 +28,8 @@ bool doubles_eq(double a, double b)
 {
 	return fabs(a - b) < epsilon;
 }
+
+void print(const char *str)
+{
+	printf("%s", str);
+}
