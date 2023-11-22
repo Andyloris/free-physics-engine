@@ -17,7 +17,7 @@ int main()
 
 	scene_set_objects(&scene, &obj);
 
-	scene_update(&scene);
+	scene_update(&scene)
 	/*particle_t part;
 	memset(&part, 0, sizeof(part));
 
