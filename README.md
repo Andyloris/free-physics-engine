@@ -33,7 +33,7 @@ cd free-physics-engine
 make all
 ```
 
-You can also run with
+You can also run the output with
 ```sh
 make run
 ```
