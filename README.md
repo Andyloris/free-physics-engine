@@ -6,7 +6,8 @@ Free physics engine (I should find a shorter name) is a lightweight, free and op
 
 ## Background
 
-I wanted to write this physics engine when I realised I was missing the part maths played in programming. I was also bored of taking up small, easy projects.
+I wanted to write this physics engine when I realised I was missing the part maths played in programming.
+I was also bored of taking up small, easy projects.
 
 ## Objectives
 
@@ -17,10 +18,10 @@ I wanted to write this physics engine when I realised I was missing the part mat
 
 ## Todo
 
-- [ ] Rotational dynamics
-- [ ] Collision detecton
 - [ ] Writing a simple API
 - [ ] Documentation
+- [ ] Rotational dynamics
+- [ ] Collision detecton
 - [ ] More shapes... (only spheres right now)
 
 ## Building
