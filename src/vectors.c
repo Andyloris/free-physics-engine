@@ -62,3 +62,9 @@ vector3d_t vector_zero()
 	const vector3d_t vect = vector3d_zero;
 	return vect;
 }
+
+bool vector_is_collinear(const vector3d_t *vect1, const vector3d_t *vect2)
+{
+	// Two vectors are collinear if both lie on a same line or parallel lines and they may be oriented in same or opposite direction
+	return doubles_eq(vect1->x*vect1->y*vect1->z, vect2->x*vect2->y*vect2->z);
+}
