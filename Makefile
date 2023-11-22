@@ -11,7 +11,7 @@ HEADERS = $(wildcard $(INCLUDE_DIR)*.h)
 $(BIN_DIR):
 	mkdir $(BIN_DIR)
 
-$(OUT): $(SRCS) $(HEADERS)
+$(OUT): $(SRCS) $(HEADERS) Makefile
 	$(CC) $(CFLAGS) $(SRCS) -o $(OUT) -I $(INCLUDE_DIR)
 
 run: $(OUT)
