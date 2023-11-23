@@ -5,6 +5,8 @@
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 # Free physics engine
 
+## What is this
+
 Free physics engine (I should find a shorter name) is a lightweight, free and open-source physics engine written in pure C.
 
 ## Background
