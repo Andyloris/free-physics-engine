@@ -7,7 +7,7 @@ OUT = $(BIN_DIR)out
 LIB = $(BIN_DIR)free-physics-engine.a
 
 CC = cc
-AR = ar
+AR = ar rcs
 LD = ld
 CFLAGS = -Wall -c -O3 -fno-math-errno
 LDFLAGS = -lm 
@@ -23,7 +23,7 @@ $(OUT): $(OBJS)
 	$(CC) $(LDFLAGS) $(OBJS) -o $(OUT)
 
 $(LIB): $(OBJS)
-	ar rcs $(LIB) $(OBJS)
+	$(AR) $(LIB) $(OBJS)
 
 $(BIN_DIR):
 	mkdir $(BIN_DIR)
