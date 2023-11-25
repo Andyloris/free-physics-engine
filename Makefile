@@ -9,7 +9,9 @@ LIB = $(BIN_DIR)free-physics-engine.a
 CC = cc
 AR = ar rcs
 LD = ld
-CFLAGS = -Wall -c -O3 -fno-math-errno
+
+WARNINGS = -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wredundant-decls -Wnested-externs -Winline -Wconversion -Wstrict-prototypes
+CFLAGS = $(WARNINGS) -c -O3 -fno-math-errno
 LDFLAGS = -lm 
 
 SRCS = $(wildcard $(SRC_DIR)*.c)

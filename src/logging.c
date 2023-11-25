@@ -1,8 +1,8 @@
 #include <stdheaders.h>
 #include <logging.h> // Already included in stdheaders.h, reincluded for the sake of consistency
 
-char *log_level_strings[] = {"FATAL", "ERROR", "WARNING", "INFO", "DEBUG", "TRACE"};
-char *log_level_colors [] = {"\x1b[0;31m", "\x1b[0;31m", "\x1b[0;35m", " \x1b[0;36m", "\x1b[0;34m", "\x1b[0;37m"};
+const char *log_level_strings[] = {"FATAL", "ERROR", "WARNING", "INFO", "DEBUG", "TRACE"};
+const char *log_level_colors [] = {"\x1b[0;31m", "\x1b[0;31m", "\x1b[0;35m", " \x1b[0;36m", "\x1b[0;34m", "\x1b[0;37m"};
 
 void log_print_level(log_level_t log_level)
 {
