@@ -3,6 +3,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/Andyloris/free-physics-engine)
 ![workflow status badge](https://github.com/Andyloris/free-physics-engine/actions/workflows/c-cpp.yml/badge.svg)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![Tokei](https://tokei.rs/b1/github/Andyloris/free-physics-engine)](https://github.com/Aaronepower/tokei)
 # Free physics engine
 
 ## What is this
