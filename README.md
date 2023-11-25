@@ -23,7 +23,7 @@ I was also bored of taking up small, easy projects.
 
 ## Todo
 
-- [ ] Writing a simple API
+- [x] Writing a simple API
 - [ ] Documentation
 - [ ] Rotational dynamics
 - [ ] Collision detecton
