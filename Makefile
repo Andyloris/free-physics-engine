@@ -8,11 +8,11 @@ CFLAGS = -Wall -lm -O3 -fno-math-errno
 SRCS = $(wildcard $(SRC_DIR)*.c)
 HEADERS = $(wildcard $(INCLUDE_DIR)*.h)
 
+$(OUT): $(BIN_DIR) $(SRCS) $(HEADERS) Makefile
+	$(CC) $(CFLAGS) $(SRCS) -o $(OUT) -I $(INCLUDE_DIR)
+
 $(BIN_DIR):
 	mkdir $(BIN_DIR)
-
-$(OUT): $(SRCS) $(HEADERS) Makefile
-	$(CC) $(CFLAGS) $(SRCS) -o $(OUT) -I $(INCLUDE_DIR)
 
 run: $(OUT)
 	$(OUT)
