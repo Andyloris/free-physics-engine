@@ -40,6 +40,11 @@ extern void fpe_object_delete(object_t *object)
 	object_free(object);
 }
 
+extern void fpe_get_object_position(object_t *object, vector3d_t **vector)
+{
+	**vector = *object->center->position;
+}
+
 // Scene
 
 extern void fpe_scene_create(size_t n, scene_t **scene, func_status_t *status)

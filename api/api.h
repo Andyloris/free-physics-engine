@@ -61,6 +61,7 @@ extern void fpe_particle_delete(fpe_particle_t *particle);
 
 extern void fpe_object_create(fpe_particle_t *particle, double radius, fpe_object_t **object, fpe_func_status_t *status);
 extern void fpe_object_delete(fpe_object_t *object);
+extern void fpe_get_object_position(fpe_object_t *object, fpe_vector3d_t **vector);
 
 // Scene
 
