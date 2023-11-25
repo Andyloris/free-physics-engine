@@ -6,7 +6,7 @@
 
 int main()
 {
-	scene_t scene = scene_alloc(1);
+	/*scene_t scene = scene_alloc(1);
 
 	object_t obj;
 
@@ -34,9 +34,9 @@ int main()
 	{
 		particle_update(&part);
 		printf("x: %lf, y: %lf, z: %lf\n", part.position.x, part.position.y, part.position.z);
-	}*/
+	}*//*
 	
-	scene_free(&scene);
+	scene_free(&scene);*/
 
     return 0;
 }

@@ -68,3 +68,29 @@ bool vector_is_collinear(const vector3d_t *vect1, const vector3d_t *vect2)
 	// Two vectors are collinear if both lie on a same line or parallel lines and they may be oriented in same or opposite direction
 	return doubles_eq(vect1->x*vect1->y*vect1->z, vect2->x*vect2->y*vect2->z);
 }
+
+vector3d_t *vector_alloc(double x, double y, double z, func_status_t *status)
+{
+	*status = SUCCESS;
+	log_info("Allocating a vector...");
+	vector3d_t *vector = malloc(sizeof(vector3d_t));
+
+	if (vector == NULL)
+	{
+		log_warn("Failed to allocate a vector (malloc returned a null pointer)");
+		*status = FAILURE;
+		return vector;
+	}
+
+	vector->x = x;
+	vector->y = y;
+	vector->z = z;
+
+	return vector;
+}
+
+void vector_free(vector3d_t *vector)
+{
+	log_info("Freeing a vector");
+	free(vector);
+}

@@ -4,16 +4,26 @@
 #include <object.h>
 #include <scene.h>
 
-scene_t scene_alloc(size_t n)
+scene_t *scene_alloc(size_t n, func_status_t *status)
 {
+	*status = SUCCESS;
 	log_info("Allocating a scene with %u objects...", n);
-	scene_t scene;
-	scene.n = n;
-	scene.objs = (object_t *)calloc(n, sizeof(object_t));
-	if (scene.objs == NULL)
+	scene_t *scene = (scene_t *)malloc(sizeof(scene_t));
+
+	if (scene == NULL)
 	{
-		log_error("Failed to allocate %u objects in c (calloc returned a null pointer)", n);
-		exit(EXIT_FAILURE);
+		log_warn("Failed to allocate scene (malloc returned a null pointer)");
+		*status = FAILURE;
+		return scene;
+	}
+
+	scene->n = n;
+	scene->objs = (object_t *)calloc(n, sizeof(object_t));
+
+	if (scene->objs == NULL)
+	{
+		log_warn("Failed to allocate %u objects (calloc returned a null pointer)", n);
+		*status = FAILURE;
 	}
 	return scene;
 }
@@ -21,19 +31,27 @@ scene_t scene_alloc(size_t n)
 void scene_free(scene_t *scene)
 {
 	log_info("Freeing a scene...");
-	free(scene->objs);
+	size_t i = 0;
+
+	while (i < scene->n)
+	{
+		object_free(&scene->objs[i]);
+	}
+
+	free(scene);
 }
 
-func_status_t scene_add_object(scene_t *scene, const object_t *obj)
+void scene_add_object(scene_t *scene, const object_t *obj, func_status_t *status)
 {
+	*status = SUCCESS;
 	scene->objs = (object_t *)realloc(scene->objs, (scene->n+1)*sizeof(object_t));
 	if (scene->objs == NULL)
 	{
 		log_warn("Failed to add %uth object to the scene", scene->n+1);
-		return FAILURE;
+		*status = FAILURE;
+		return;
 	}
 	memcpy(&scene->objs[scene->n++], obj, sizeof(object_t));
-	return SUCCESS;
 }
 
 void scene_set_objects(scene_t *scene, const object_t *obj)

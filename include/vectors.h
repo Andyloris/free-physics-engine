@@ -18,3 +18,5 @@ vector3d_t vector_sub(const vector3d_t *vect1, const vector3d_t *vect2);
 vector3d_t vector_scalar_mult(const vector3d_t *vect1, const double scalar);
 vector3d_t vector_zero();
 bool vector_is_collinear(const vector3d_t *vect1, const vector3d_t *vect2);
+vector3d_t *vector_alloc(double x, double y, double z, func_status_t *status);
+void vector_free(vector3d_t *vector);
