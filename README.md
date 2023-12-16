@@ -25,7 +25,7 @@ I was also bored of taking up small, easy projects.
 ## Todo
 
 - [x] Writing a simple API
-- [ ] Documentation
+- [x] Documentation
 - [ ] Rotational dynamics
 - [ ] Collision detecton
 - [ ] More shapes... (only spheres right now)
@@ -44,3 +44,8 @@ You can also run the output with
 ```sh
 make run
 ```
+
+## The documentation
+
+The ![documentation](https://andyloris.github.io/free-physics-engine/) is very new, so if you notice something weird, or want to add something, don't hesitate to open a pull request !!!
+I use Doxygen to generate the documentation, and every documentation block is located in the api/api.h file.
