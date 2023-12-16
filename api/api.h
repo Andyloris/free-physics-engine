@@ -8,7 +8,7 @@
 enum fpe_func_status_enum
 {
 	SUCCESS = 0,
-	FAILURE
+	FAILURE = 1
 };
 
 /**

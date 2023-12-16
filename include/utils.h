@@ -3,7 +3,7 @@
 enum func_status_enum
 {
 	SUCCESS = 0,
-	FAILURE
+	FAILURE = 1
 };
 
 typedef enum func_status_enum func_status_t;
