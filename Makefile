@@ -8,7 +8,6 @@ LIB = $(BIN_DIR)free-physics-engine.a
 
 CC = cc
 AR = ar rcs
-LD = ld
 
 WARNINGS = -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wredundant-decls -Wnested-externs -Winline -Wconversion -Wstrict-prototypes
 CFLAGS = $(WARNINGS) -c -O3 -fno-math-errno
@@ -39,6 +38,8 @@ run: $(OUT)
 clean:
 	rm -f $(OBJ_DIR)*
 	rmdir $(OBJ_DIR)
+	rm -f $(BIN_DIR)*
+	rmdir $(BIN_DIR)
 
 all: $(BIN_DIR) $(OBJ_DIR) $(OUT) $(LIB)
 lib: $(BIN_DIR) $(OBJ_DIR) $(LIB)
